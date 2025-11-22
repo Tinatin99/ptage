@@ -1,0 +1,1350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: black;
+}
+
+/* --- HEADER --- */
+
+#header-PTAGe {
+  background-color: rgba(158, 192, 219, 0.938);
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+}
+
+/* მხოლოდ ჰედერის მენიუს ul, არა ყველა ul მთლიან საიტზე */
+#header-PTAGe ul {
+  border-radius: 10px;
+  font-size: 22px;
+  color: black;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 15px;
+}
+
+#header-PTAGe a {
+  text-decoration: none;
+  color: black;
+}
+
+#header-PTAGe a:hover {
+  text-decoration: underline;
+}
+
+#logo_image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+
+
+
+/* --- BURGER --- */
+
+/* კონტეინერი */
+.burger-wrapper {
+  display: none; /* თავიდან დამალული იქნება */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* 3 ხაზიანი ბურგერი */
+.burger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ხაზები */
+.burger .line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.2s ease;
+}
+
+/* hover – ოდნავ ცვრეტილი ეფექტი :) */
+.burger-wrapper:hover .line {
+  background-color: #333;
+}
+
+/* ბურგერის ანიმაცია, სურვილის შემთხვევაში */
+.burger-wrapper.open .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-wrapper.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-wrapper.open .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* მობილურზე – მენიუს დამალვა/გამოჩენა ბურგერით */
+
+
+  /* როცა header-ს აქვს .header-open კლასი – გამოჩნდეს მენიუ */
+  #header-PTAGe.header-open ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;      /* ჰედერის ქვემოთ */
+    right: 10px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  /* ლინკები ცოტა უფრო მსუბუქად გამოჩნდეს მობილურზე */
+  #header-PTAGe.header-open ul a {
+    font-size: 18px;
+  }
+
+
+
+
+
+
+.open .text-burger {
+  display: block;
+
+} */
+
+/* --- INTRO / INFO --- */
+
+.intro-ul {
+  list-style: none;
+  padding: 10px 15px;
+}
+
+.intro-ul span {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+#info-link {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+.intro-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.intro-float {
+  float: right;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+/* --- HERO BACKGROUND --- */
+
+.bg_image1 {
+  background-image: url("https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/497653466_24405128302421121_9132090218769959741_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHCSNqO5zoqf0tOl_rCozvAU_X-dIEhxENT9f50gSHEQwO9lC1K11qe-NbbCJCRzk_X_2o1Q2uD9JnJKL5vBMCN&_nc_ohc=cb7xcKRoTE4Q7kNvwHrht3O&_nc_oc=AdnTfMpfvbT93TdOUtUFRcII5dtYofIVoO6tbjjLdENJ2HF3otkN0w_a3DWZa8W0ZYs&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=BxHFgU0Q8PTa2uS4mDAmXA&oh=00_AfhlMmD6AsLjzh25rFKDC9D_A5WbX1YwUc0OboHh0jDylg&oe=691EB141");
+  min-height: 750px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(218, 255, 196);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: 120px; /* რომ header-ს არ დაეფაროს */
+}
+
+.small-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  background-image: url("https://scontent.ftbs4-2.fna.fbcdn.net/v/t39.30808-6/336768551_2310917392409298_3196326985489698166_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFoeMB97b1U0Wzecw2uxHML9X_z94UxdD31f_P3hTF0PbIyUX4Sea55-90wM_RoyXrzay_bGHrOQBQcyBcI2VHT&_nc_ohc=0lex1SaPSh8Q7kNvwHe4feC&_nc_oc=Adn9fiFltv5S4x8MEW5ieBlicMnX9yw0MIzJfKhQt-lV1UKgJ6CLaWXjcE2jznFSuok&_nc_zt=23&_nc_ht=scontent.ftbs4-2.fna&_nc_gid=GfNuwDBOmbOG6dsLOyPMWg&oh=00_AfhjK945lCoGPb9t5dmpokj3T_LHcY_dYakbpCfKt2WbGA&oe=691ECAE5");
+  background-size: cover;
+  background-position: center;
+  border: 6px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-ptage {
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 40px;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 15px;
+  margin-top: 500px;
+}
+
+/* --- HEADINGS --- */
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.physics {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  margin: 40px auto 20px;
+  color: #222;
+}
+
+h2,
+h3 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* --- PTAGe SECTION / ორ სვეტად --- */
+
+.ptage-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  padding: 25px;
+}
+
+/* მარცხენა სვეტი – ინფო */
+
+.left-side {
+  width: 45%;
+  position: sticky;
+  top: 140px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.left-side::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-side::-webkit-scrollbar-thumb {
+  background: #1789db;
+  border-radius: 10px;
+}
+
+/* მარჯვენა სვეტი – ფოტოები და ტექსტი */
+
+.hero,
+.right-side {
+  width: 55%;
+}
+
+/* გვერდიგვერდ ფოტოები intro-ში */
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  margin-right: 20px;
+  z-index: 1;
+}
+
+/* --- ფოტო გალერეა --- */
+
+#PTAGe-img-container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.PTAGe-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.PTAGe-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ფოტო მოდალი */
+
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.img-modal-content {
+  max-width: 85vw;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.img-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-prev,
+.modal-next {
+  cursor: pointer;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.modal-prev {
+  left: 30px;
+}
+.modal-next {
+  right: 30px;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  transform: scale(1.2);
+  color: #66d1ff;
+}
+
+/* --- ABOUT SECTION --- */
+
+.about {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* --- FOOTER --- */
+
+.fa-facebook {
+  color: blue;
+  font-size: 40px;
+}
+
+.fa-youtube {
+  color: red;
+  font-size: 40px;
+}
+
+.fa-twitter {
+  color: rgb(0, 179, 255);
+  font-size: 40px;
+}
+
+.fa-linkedin {
+  color: #007bff;
+  font-size: 40px;
+}
+
+footer {
+  margin-top: 100px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(228, 250, 229); /* იყო არასწორი rgb(228, 508, 299) */
+}
+
+.sacont {
+  text-align: center;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+}
+
+.li_cont {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact:hover {
+  color: #0056b3;
+}
+
+.social-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-box .social-link {
+  font-size: 30px;
+  color: #555;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-box .social-link:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+.social-box .social-link i {
+  margin: 0 10px;
+}
+
+
+
+
+
+/* რენდერი.js */
+
+
+.search-wrapper {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-wrapper input {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 180px;
+}
+
+
+
+
+
+/* მთავარი გვერდი, სლაიდერი */
+
+
+ /* slider */
+
+
+
+/* slider */
+#slider {
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f72222), to(#5f3512));
+  background-image: -o-linear-gradient(left, blue #89a3aa);
+  background-image: linear-gradient(to right,blue, #89a3aa);
+  border-radius: 20%;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  z-index: 2;
+}
+.arrow-left {
+  left: 80px
+}
+.arrow-right {
+  right: 80px;
+}
+.arrow:hover {
+  border: 2px solid white;
+  background-size: 300% 100%;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 5px;
+  opacity: 40%;
+}
+.dot.active {
+  opacity: 100%;
+}
+.dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 5%;
+  cursor: pointer;
+}
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+
+
+
+
+
+/* about */
+
+
+.founders-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.founders-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* GRID */
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* ტელეფონი - 1 სვეტი */
+  gap: 20px;
+}
+
+/* აიპადი */
+@media (min-width: 768px) {
+  .founders-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2x2 */
+  }
+}
+
+/* დესკტოპი */
+@media (min-width: 1024px) {
+  .founders-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 სვეტი – 3x3 სტილი */
+  }
+}
+
+.founder-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ერთი ხაზი – ფოტოს ზემოთ */
+.founder-short {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* თუ ძალიან გრძელი იქნება, "..." დაისმება */
+}
+
+/* ფოტო – არ შევცვალეთ, უბრალოდ ვაზივითებთ ბლოკში */
+.PTAGe-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* დამალული სრული ტექსტი */
+.founder-more {
+  display: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* როცა ღილაკი დაჭერილია და added class */
+.founder-card.open .founder-more {
+  display: block;
+}
+
+/* ღილაკი */
+.toggle-btn {
+  align-self: flex-start;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #137fb4;
+  background: #ffffff;
+  color: #137fb4;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.toggle-btn:hover {
+  background: #137fb4;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+
+/* accordeon */
+
+
+
+   /* accordion */
+ .accordion {
+  height: 750px;
+  max-width:1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wraper-body {
+  background-color: #524587;
+  max-width:1000px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.accordion-container {
+  max-width: 870px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.fontColor {
+  color: rgb(244, 244, 244);
+}
+.fontSize {
+  font-size: 20px;
+}
+.accordion-title {
+  position: relative;
+  padding: 25px 0;
+  cursor: pointer;
+}
+.accordion-title::before {
+  content: " +";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+}
+
+.accordion h2 {
+  font-size: 27px;
+  padding-top: 60px;
+}
+.last {
+  padding-bottom: 80px;
+}
+.accordion-description {
+  width: 100%;
+  font-size: 16px;
+  height: 0;
+  overflow: hidden;
+}
+.line {
+  width: 100%;
+  height: 1.5px;
+ 
+}
+.accordion-container.active .accordion-description {
+  height: 100px;
+  padding: 10px;
+}
+.accordion-container.active .accordion-title::before {
+  content: "-";
+  font-size: 25px;
+}
+
+
+.naec{
+  width: 50px;
+  height: 50px;
+  color: black;
+  font-size: 22px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/12/NAEC_Georgia_Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
+/* news.html */
+
+
+#search-input {
+  padding: 8px 12px;
+  margin: 30px 0 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}
+
+.user-item {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+.user-item:hover {
+  background-color: rgba(158, 192, 219, 0.5);
+}
+
+
+/* გამოვიყენე მასივი users, სადაც ინახება მომხმარებლების ობიექტები.
+
+საძიებო ველის (input) input–ის 이벤트-ზე ვიღებ ტექსტს.
+
+filter()–ით ვფილტრავ მასივს, includes()–ით ვამოწმებ,
+ შეიცავს თუ არა სახელი ჩაწერილ ტექსტს.
+
+როდესაც შედეგი მზად არის, ვიძახებ renderUsers(filtered)
+ ფუნქციას, რომელიც HTML–ში თავიდან ხატავს სიას (rerender). */
+
+
+ /* gverdis asqrolva */
+
+
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(23, 137, 219, 0.95); 
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: none;          
+  z-index: 1000;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: rgba(10, 94, 160, 0.97);
+  transform: translateY(-2px);
+}
+
+#scrollTopBtn.show {
+  display: block;
+  opacity: 1;
+}
+
+/* form*/
+
+
+
+
+.login-section {
+  min-height: 80vh;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(23, 137, 219, 0.2);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd2e1;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #1789db;
+  box-shadow: 0 0 0 2px rgba(23, 137, 219, 0.15);
+}
+
+.error-message {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #d93025;
+  min-height: 16px; 
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: none;
+  background-color: #1789db;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #0f68a8;
+  box-shadow: 0 4px 12px rgba(15, 104, 168, 0.4);
+  transform: translateY(-1px);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+.login-status {
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.login-status.success {
+  color: #15803d;
+}
+
+.login-status.error {
+  color: #d93025;
+}
+
+
+/* leqtorebis sia */
+/* 
+
+.search-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd2e1;
+  font-size: 14px;
+}
+
+.lecturer-card {
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+} */
+
+
+/* sacontacto */
+
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.contact-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #183153;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cbd2e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1789db;
+  box-shadow: 0 0 0 2px rgba(23,137,219,0.15);
+}
+
+.error {
+  color: #d93025;
+  font-size: 12px;
+  min-height: 14px;
+}
+
+
+.contact-btn {
+  width: 100%;
+  background: #1789db;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact-btn:hover {
+  background: #0f6cab;
+  transform: translateY(-1px);
+}
+
+
+.status {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.status.success {
+  color: green;
+}
+
+.status.error {
+  color: #d93025;
+}
+
+/* export */
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #e6f3ff;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15), transparent 60%),
+        radial-gradient(circle at 80% 0%, rgba(129, 140, 248, 0.2), transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.25), #020617 70%);
+      padding: 32px 16px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width:1750px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: clamp(32px, 5vw, 42px);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      text-align: center;
+      color: #cbd5f5;
+      margin-bottom: 24px;
+    }
+
+    header p span {
+      color: #7dd3fc;
+      font-weight: 600;
+    }
+
+    /* Featured quote (slider) */
+
+    .featured-wrapper {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin-bottom: 32px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background:
+        radial-gradient(circle at 0 0, rgba(96, 165, 250, 0.28), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.18), transparent 55%);
+      opacity: 0.45;
+      z-index: -1;
+      filter: blur(8px);
+    }
+
+    .featured-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #93c5fd;
+      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .featured-label::before {
+      content: "⚛";
+      font-size: 16px;
+    }
+
+    .featured-quote-text {
+      font-size: clamp(20px, 3vw, 24px);
+      line-height: 1.5;
+      font-weight: 600;
+      color: #e0f2fe;
+      margin-bottom: 12px;
+    }
+
+    .featured-quote-author {
+      font-size: 15px;
+      color: #bfdbfe;
+      opacity: 0.9;
+      margin-bottom: 18px;
+    }
+
+    .featured-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .featured-counter {
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .btn-next {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 219, 254, 0.7);
+      background: rgba(15, 23, 42, 0.7);
+      color: #e0f2fe;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-next span {
+      font-size: 18px;
+    }
+
+    .btn-next:hover {
+      transform: translateY(-1px) translateX(1px);
+      background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.6);
+      border-color: transparent;
+    }
+
+    .btn-next:active {
+      transform: translateY(0) translateX(0);
+      box-shadow: none;
+    }
+
+    .fade {
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Quotes grid */
+
+    /* Quotes grid */
+
+.quotes-grid-title {
+  font-size: 18px;
+  color: #bfdbfe;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quotes-grid-title span {
+  font-size: 20px;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  perspective: 1200px; /* 3D სცენა */
+}
+
+/* 3D Flip Card */
+
+.quote-card {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.2), transparent 55%),
+              radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.15), rgba(15, 23, 42, 0.9));
+}
+
+.quote-card:hover .card-inner {
+  transform: rotateY(180deg) translateY(-4px);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 1);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  padding: 18px 18px 16px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-front {
+  color: #e5e7eb;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.35), rgba(15, 23, 42, 0.95));
+  color: #e0f2fe;
+}
+
+.card-quote-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.card-quote-author {
+  font-size: 14px;
+  color: #93c5fd;
+  margin-top: auto;
+  text-align: right;
+}
+
+.card-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.card-orbit {
+  font-size: 11px;
+  color: #a5b4fc;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-orbit::before {
+  content: "●";
+  font-size: 8px;
+}

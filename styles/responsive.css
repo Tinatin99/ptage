@@ -1,0 +1,251 @@
+/* კონტაქტების რესფონსიულობა */
+
+/* --- ბურგერის responsive --- */
+
+/* მობილურზე: მენიუ დამალულია, ბურგერი ჩანს */
+@media (max-width: 900px) {
+  #header-PTAGe {
+    position: relative;
+  }
+
+  #header-PTAGe ul {
+    display: none;                /* default – არ ჩანს */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgba(19, 130, 182, 0.95);
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  /* როცა ბურგერს დააჭერ, JS ამატებს header-open-ს და მენიუ ჩნდება */
+  #header-PTAGe.header-open ul {
+    display: flex;
+  }
+
+  .burger-wrapper {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+/* დიდ ეკრანზე: მენიუ ყოველთვის ჩანს, ბურგერი არ ჩანს */
+@media (min-width: 901px) {
+  #header-PTAGe ul {
+    display: flex;
+  }
+
+  .burger-wrapper {
+    display: none;
+  }
+}
+
+
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 992px) {
+  .ptage-section {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .hero,
+  .right-side {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+
+  .bg_image1 {
+    margin-top: 100px;
+    min-height: 500px;
+  }
+
+  .text {
+    font-size: 28px;
+    margin-top: 320px;
+  }
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: 30%} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 30%} 
+  to {opacity: 1}
+}
+.key {
+  max-width: 70px;
+  opacity: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+  z-index: 109;
+}
+
+/* Footer-ის responsive, რაც ბოლოს გქონდა HTML-ის გარეთ */
+@media (max-width: 768px) {
+  .sacont {
+    padding: 10px;
+  }
+
+  .li_cont li {
+    font-size: 18px;
+  }
+
+  .social-box {
+    gap: 15px;
+  }
+
+  .social-box .social-link {
+    font-size: 24px;
+  }
+}
+
+/* რუკა */
+@media (max-width: 768px) {
+  #contact1 {
+    padding-bottom: 75%; /* თუ გამოიყენებ რუკას */
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-wrapper {
+    padding: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+ 
+
+    .sacont {
+      padding: 10px;
+    }
+    .li_cont li {
+      font-size: 20px;
+    }
+    .social-box {
+      gap: 15px;
+    }
+    .social-box li {
+      font-size: 24px;
+    }
+  }
+
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  #contact1 {
+    padding-bottom: 75%; /* 4:3 aspect ratio for smaller screens */
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sqroli */
+
+@media (max-width: 420px) {
+  #scrollTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+@media (min-width: 420px) and (max-width: 1024px) {
+  #scrollTopBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form */
+
+
+@media (max-width: 420px) {
+  .login-card {
+    padding: 20px 16px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+}
+
+
+/* contacti */
+
+
+
+/* export */
+
+ @media (max-width: 768px) {
+      .featured-wrapper {
+        padding: 18px 14px;
+      }
+
+      .featured-card {
+        width: 100%;
+      }
+
+    }
+
+
+
+     @media (max-width: 425px) {
+      .featured-wrapper {
+        padding: 12px 10px;
+      }
+
+      .featured-card {
+        width: 100%;
+      }
+      
+    }
