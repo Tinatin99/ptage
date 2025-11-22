@@ -140,13 +140,38 @@ body {
 .open .text-burger {
   display: block;
 
-} */
+} 
 
 /* --- INTRO / INFO --- */
-
+.ptah2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color:white;
+}
+.ptah3{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: black;
+}
+.about-ptage{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+.intro{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
 .intro-ul {
   list-style: none;
   padding: 10px 15px;
+  margin: 20px 0;
+  color: #000;
 }
 
 .intro-ul span {
@@ -187,6 +212,14 @@ body {
   float: right;
   margin-left: 5px;
   text-decoration: underline;
+}
+
+#intro-float {
+  float: right;
+  margin-left: 5px;
+  text-decoration: underline;
+  margin-top: 15px;
+  color: #000;
 }
 
 /* --- HERO BACKGROUND --- */
@@ -246,7 +279,7 @@ h1 {
   font-weight: 700;
   font-size: 35px;
   margin: 40px auto 20px;
-  color: #222;
+  color:white
 }
 
 h2,
