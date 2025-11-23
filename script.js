@@ -73,3 +73,9 @@ localQuotes.forEach((item) => {
   quoteContainer.appendChild(card);
 });
 
+
+
+// async/await.
+const response = await fetch("https://randomuser.me/api/?results=6");
+const data = await response.json();
+renderUsers(data.results);
