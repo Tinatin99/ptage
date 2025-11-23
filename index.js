@@ -34,3 +34,23 @@
     modalImg.src = imgs[currentIndex].src;
   });
 
+// კონფერენცია
+
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.querySelector(".ptage-text-wrapper");
+  const text = document.querySelector(".ptage-text");
+  const btn = document.querySelector(".ptage-readmore-btn");
+
+  if (!wrapper || !text || !btn) return;
+
+  btn.addEventListener("click", function () {
+    const isExpanded = wrapper.classList.toggle("expanded");
+
+    btn.textContent = isExpanded ? "ნაკლების ნახვა" : "მეტის ნახვა";
+
+    if (!isExpanded) {
+      // დაბრუნებისას გავუტოლოთ scroll-ს თავი
+      text.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});

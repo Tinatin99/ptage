@@ -1,17 +1,16 @@
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".founder-card");
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".founders-grid");
 
-    cards.forEach((card) => {
-      const btn = card.querySelector(".toggle-btn");
+  grid.addEventListener("click", function (e) {
+    const btn = e.target.closest(".toggle-btn");
+    if (!btn) return;
 
-      btn.addEventListener("click", () => {
-        const isOpen = card.classList.toggle("open");
-        btn.textContent = isOpen ? "დახურვა" : "ვრცლად";
-      });
-    });
+    const card = btn.closest(".founder-card");
+    if (!card) return;
+
+    // 🔥 მხოლოდ ამ ბარათს გადართავს
+    const isOpen = card.classList.toggle("open");
+
+    btn.textContent = isOpen ? "დახურვა" : "ვრცლად";
   });
-
-
-
-
-
+});

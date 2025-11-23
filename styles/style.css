@@ -274,6 +274,16 @@ h1 {
   color: #222;
 }
 
+.abouth1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: white;
+  margin-top: 50px;
+   text-shadow: #9d1dd8 4px 14px 24px;
+}
+
 .physics {
   text-align: center;
   font-weight: 700;
@@ -327,7 +337,7 @@ h3 {
 
 /* გვერდიგვერდ ფოტოები intro-ში */
 
-.photo {
+/* .photo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -335,7 +345,96 @@ h3 {
   object-fit: cover;
   margin-right: 20px;
   z-index: 1;
+} */
+
+
+
+
+/* Photos grid */
+
+
+
+
+.photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
 }
+
+/* თითო ფოტოს ხედთან შესაბამისი ზომა */
+.photo {
+  width: calc(33.33% - 12px);
+  border-radius: 20%;
+  object-fit: cover;
+  height: 120px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* hover ეფექტი */
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+/* დამალული ფოტო */
+.photo.hidden-photo {
+  display: none;
+}
+
+
+
+#showMorePhotos:hover {
+  background: #0e6a97;
+}
+
+
+
+
+.photos2-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+/* თითო ფოტოს ხედთან შესაბამისი ზომა */
+.photos2 .photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.photo2 {
+  width: calc(50.33% - 12px);
+  border-radius: 10%;
+  object-fit: cover;
+  height: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover ეფექტი */
+.photo2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* დამალული ფოტოები */
+.photo2.hidden-photo2 {
+  display: none;
+}
+
+/* ღილაკი */
+.showMorePhotos2 {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #137eb6;
+  color: white;
+  cursor: pointer;
+}
+
+.showMorePhotos2:hover {
+  background: #0e6a97;
+}
+
 
 /* --- ფოტო გალერეა --- */
 
@@ -514,7 +613,7 @@ footer {
 
 
 
-/* რენდერი.js */
+/* რენდერი. */
 
 
 .search-wrapper {
@@ -628,18 +727,21 @@ footer {
 /* about */
 
 
+/* about */
+
 .founders-section {
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 1700px;
+  margin: 60px auto;
   padding: 0 16px;
 }
 
-.founders-title {
+/* .founders-title {
   text-align: center;
   margin-bottom: 24px;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
-}
+  text-shadow: #9d1dd8 4px 14px 24px;
+} */
 
 /* GRID */
 .founders-grid {
@@ -648,84 +750,153 @@ footer {
   gap: 20px;
 }
 
-/* აიპადი */
-@media (min-width: 768px) {
-  .founders-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2x2 */
-  }
-}
-
-/* დესკტოპი */
-@media (min-width: 1024px) {
-  .founders-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 სვეტი – 3x3 სტილი */
-  }
-}
-
+/* ბარათი */
 .founder-card {
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 12px 12px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 16px 14px 19px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+
+  /* ნაზი ჰოვერ-ანიმაციები */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* კარტის შიგთავსზე ლამაზი „ჩაიტვირთე“ */
+.founder-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 10% 0%, rgba(19, 127, 180, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.founder-card .extra-text {
+  display: none;
+}
+.open .extra-text { display:block; }
+
+
+.founder-card .open .extra-text {
+  display: block;
+}
+
+.founder-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(19, 127, 180, 0.3);
+}
+
+.founder-card:hover::before {
+  opacity: 1;
 }
 
 /* ერთი ხაზი – ფოტოს ზემოთ */
 .founder-short {
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* თუ ძალიან გრძელი იქნება, "..." დაისმება */
+  text-overflow: ellipsis;
 }
 
-/* ფოტო – არ შევცვალეთ, უბრალოდ ვაზივითებთ ბლოკში */
+/* ფოტო */
 .PTAGe-img {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+/* ფოტოზე ჰოვერი – მსუბუქი zoom + გაჯერება */
+.founder-card:hover .PTAGe-img {
+  transform: scale(1.05);
+  filter: saturate(1.15) contrast(1.03);
 }
 
 /* დამალული სრული ტექსტი */
 .founder-more {
   display: none;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #333;
 }
 
-/* როცა ღილაკი დაჭერილია და added class */
+/* როცა ღიაა ბარათი */
 .founder-card.open .founder-more {
   display: block;
+  animation: fadeDown 0.25s ease;
 }
 
 /* ღილაკი */
 .toggle-btn {
   align-self: flex-start;
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  padding: 7px 16px;
+  font-size: 0.9rem;
   border-radius: 999px;
   border: 1px solid #137fb4;
   background: #ffffff;
   color: #137fb4;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.12s ease,
+    box-shadow 0.2s ease;
+}
+
+/* პატარა ისარი ტექსტის გვერდით */
+.toggle-btn::after {
+  content: "▼";
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.founder-card.open .toggle-btn::after {
+  transform: rotate(180deg);
 }
 
 .toggle-btn:hover {
   background: #137fb4;
   color: #ffffff;
   transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(19, 127, 180, 0.35);
 }
+
 .toggle-btn:active {
   transform: translateY(0);
+  box-shadow: none;
 }
+
+
+
+.founder-card.open .founder-more {
+  display: block;
+}
+
+
+
 
 
 /* accordeon */
@@ -1380,4 +1551,366 @@ filter()–ით ვფილტრავ მასივს, includes()–ი�
 .card-orbit::before {
   content: "●";
   font-size: 8px;
+}
+
+
+/* კონფერენცია */
+
+.ptage-text-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* თვითონ ტექსტი – ერთი ხაზი, დამალული बाकी */
+.ptage-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-height: 1.6em;       /* მხოლოდ ერთი ხაზი */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+
+/* როცა გახსნილია */
+.ptage-text-wrapper.expanded .ptage-text {
+  max-height: 2000px;      /* საკმარისად დიდი, რომ ყველაფერი გამოჩნდეს */
+}
+
+/* ღილაკი */
+.ptage-readmore-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgba(19, 130, 182, 0.9);
+  color: #fff;
+}
+
+/* hover ეფექტი */
+.ptage-readmore-btn:hover {
+  background-color: rgba(19, 130, 182, 1);
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+  .ptage-text-wrapper {
+    padding: 0 12px;
+    margin: 15px auto;
+  }
+
+  .ptage-text {
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 1.5em;   /* მაინც ერთი ხაზი, უბრალოდ ოდნავ პატარა */
+  }
+
+  .ptage-readmore-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+
+
+/* კონფერენცია განცხადება 2025 */
+
+.info-box {
+  width: 100%;
+  max-width: 700px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #e6f3ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #0284c7;
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* about========= ფიზიკოსთა სექცია – საერთო სტილები ========= */
+
+.phys-section {
+  padding: 48px 16px;
+  margin: 40px auto 60px;
+}
+
+.phys-inner {
+  max-width: 1700px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5fbff, #e2f1ff);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(15, 54, 99, 0.16);
+  padding: 32px 20px 40px;
+}
+
+/* ჰედერი */
+
+.phys-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.phys-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0f2a4a;
+  margin-bottom: 10px;
+  text-shadow: #66d1ff 2px 8px 16px;
+}
+
+.phys-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #304766;
+  
+}
+
+/* ფილტრის ღილაკები */
+
+.phys-controls {
+  margin-top: 18px;
+  display: inline-flex;
+  gap: 8px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(40, 120, 184, 0.15);
+  
+}
+
+.phys-filter-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #28527a;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.phys-filter-btn[aria-pressed="true"] {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.phys-filter-btn:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+/* ბარათების გრიდი */
+
+.phys-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* ბარათები */
+
+.phys-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 191, 237, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phys-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #12325c;
+}
+
+.phys-meta {
+  font-size: 0.82rem;
+  color: #50637c;
+}
+
+.phys-bio {
+  font-size: 0.9rem;
+  color: #1f2933;
+  line-height: 1.55;
+}
+
+.phys-quote {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #1d4ed8;
+  position: relative;
+  padding-left: 14px;
+}
+
+.phys-quote::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -4px;
+  font-size: 1.4rem;
+  color: #93c5fd;
+}
+/* ნაზი ჰოვერი ბარათებზე */
+.phys-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+.phys-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* api */
+
+/* ===== API სექცია – Random Users ===== */
+
+.api-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 16px 40px;
+}
+
+.api-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 24px 18px 28px;
+}
+
+.api-title {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.api-text {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  color: #333;
+}
+
+.api-link {
+  font-weight: 600;
+  color: #137eb6;
+}
+
+/* ღილაკი */
+.api-btn {
+  display: block;
+  margin: 0 auto 16px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #137eb6;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.api-btn:hover {
+  background: #0f6c9b;
+  box-shadow: 0 6px 15px rgba(19, 126, 182, 0.35);
+  transform: translateY(-1px);
+}
+
+.api-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Loading + Error */
+.api-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 40px;
+  margin-bottom: 14px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.api-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid rgba(19, 126, 182, 0.2);
+  border-top-color: #137eb6;
+  animation: spin 0.8s linear infinite;
+}
+
+.user-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(19, 126, 182, 0.08),
+    rgba(19, 126, 182, 0.02)
+  );
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 2px solid #137eb6;
+}
+
+.user-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.user-country {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: #0e4f72;
+  word-break: break-all;
 }

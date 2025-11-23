@@ -252,3 +252,6 @@ export const localQuotes = [
     author: "Immanuel Kant (1724–1804), Philosophy of Physics"
   }
 ];
+
+
+

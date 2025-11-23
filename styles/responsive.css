@@ -249,3 +249,146 @@
       }
       
     }
+
+
+/* foto */
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .photo {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .photo {
+    width: 100%;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .photo2 {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .photo2 {
+    width: 100%;
+  }
+}
+/* about */
+
+
+/* მარტივი fade-down ანიმაცია ტექსტისთვის */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE – დიდი ეკრანები: 2, შემდეგ 3 სვეტი სურვილისამებრ */
+@media (min-width: 768px) {
+  .founders-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .founders-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+
+/* ========= RESPONSIVE ========= */
+
+/* 425px-მდე – ტელეფონი: 1 სვეტი უკვე გვაქვს */
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .phys-inner {
+    padding: 28px 24px 36px;
+  }
+
+  .phys-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .phys-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* 769–1024px – პლანშეტი */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .phys-inner {
+    padding: 32px 28px 40px;
+  }
+
+  .phys-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .phys-card {
+    padding: 18px 18px 20px;
+  }
+}
+
+/* 1024px+ – დიდი ეკრანი, 3 სვეტი */
+
+@media (min-width: 1025px) {
+  .phys-inner {
+    padding: 36px 32px 44px;
+  }
+
+  .phys-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* api */
+
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.api-error {
+  color: #c62828;
+  font-size: 0.9rem;
+}
+
+/* User ბარათები */
+.users-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 768px-ზე – 2 სვეტი */
+@media (min-width: 768px) {
+  .users-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 1024px-ზე – 3 სვეტი */
+@media (min-width: 1024px) {
+  .users-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

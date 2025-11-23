@@ -72,3 +72,4 @@ localQuotes.forEach((item) => {
 
   quoteContainer.appendChild(card);
 });
+

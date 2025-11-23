@@ -15,3 +15,14 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
+
+
+// კონფ-განცხადება
+
+function toggleText(btn) {
+  const hiddenText = btn.previousElementSibling;
+  const isHidden = hiddenText.classList.contains("hidden");
+
+  hiddenText.classList.toggle("hidden", !isHidden);
+  btn.textContent = isHidden ? "ნაკლების ნახვა" : "მეტის ნახვა";
+}
