@@ -84,88 +84,216 @@
 
     </header>
 
-    <main class="login-main">
+ <main class="forms-main">
 
+  <div class="forms-grid">
 
+    <!-- 1) ავთორიზაციის ბარათი (დიდი ლოგინი) -->
+    <section class="form-card">
+      <section class="login-section">
+        <div class="login-card">
+          <h2 class="login-title">ავტორიზაცია</h2>
 
-        <section class="login-section">
-            <div class="login-card">
-                <h2 class="login-title">ავტორიზაცია</h2>
-
-                <form id="loginForm" novalidate>
-                    <div class="form-group">
-                        <label for="email">ელ–ფოსტა</label>
-                        <input type="email" id="email" name="email" placeholder="example@mail.com" required />
-                        <small class="error-message" id="emailError"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">პაროლი</label>
-                        <input type="password" id="password" name="password" placeholder="შეიყვანე პაროლი" required />
-                        <small class="error-message" id="passwordError"></small>
-                    </div>
-
-                    <button type="submit" class="login-btn">შესვლა</button>
-
-                    <p class="login-status" id="loginStatus"></p>
-                </form>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="email">ელ–ფოსტა</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@mail.com"
+                required />
+              <small class="error-message" id="emailError"></small>
             </div>
-        </section>
 
-        <input type="email" id="email">
-        <input type="password" id="password">
+            <div class="form-group">
+              <label for="password">პაროლი</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="შეიყვანე პაროლი"
+                required />
+              <small class="error-message" id="passwordError"></small>
+            </div>
+
+            <button type="submit" class="login-btn">შესვლა</button>
+
+            <p class="login-status" id="loginStatus"></p>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <!-- 2) მეორე ლოგინი / ძიება -->
+    <section class="form-card">
+      <form id="loginForm">
+        <h2 class="form-title">შესვლა / ძიება</h2>
+
+        <input type="email" id="email" placeholder="შეიყვანე ელ.ფოსტა" />
         <small id="emailError"></small>
+
+        <input type="password" id="password" placeholder="შეიყვანე პაროლი" />
         <small id="passwordError"></small>
+
+        <button type="submit">შესვლა / ძიება</button>
+
         <p id="loginStatus"></p>
-        
+      </form>
+    </section>
 
+    <!-- 3) საკონტაქტო ფორმა -->
+    <section class="form-card">
+      <section class="contact-section">
+        <div class="contact-wrapper">
+          <h2>საკონტაქტო ფორმა</h2>
 
-        <section class="contact-section">
-            <div class="contact-wrapper">
-                <h2>საკონტაქტო ფორმა</h2>
-
-                <form id="contactForm" novalidate>
-
-                    <div class="form-group">
-                        <label for="name">სახელი</label>
-                        <input type="text" id="name" placeholder="ჩაწერეთ თქვენი სახელი" required />
-                        <small class="error" id="nameError"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">ელ–ფოსტა</label>
-                        <input type="email" id="email" placeholder="example@mail.com" required />
-                        <small class="error" id="emailError"></small>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="phone">ტელეფონი</label>
-                        <input type="tel" id="phone" placeholder="+995 5XX XX XX XX" />
-                        <small class="error" id="phoneError"></small>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="message">შეტყობინება</label>
-                        <textarea id="message" rows="4" placeholder="ჩაწერეთ ტექსტი..." required></textarea>
-                        <small class="error" id="messageError"></small>
-                    </div>
-
-                    <button type="submit" class="contact-btn">გაგზავნა</button>
-                    <p id="formStatus" class="status"></p>
-                </form>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">სახელი</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="ჩაწერეთ თქვენი სახელი"
+                required />
+              <small class="error" id="nameError"></small>
             </div>
-        </section>
 
-    </main>
+            <div class="form-group">
+              <label for="email">ელ–ფოსტა</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@mail.com"
+                required />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">ტელეფონი</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+995 5XX XX XX XX" />
+              <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">შეტყობინება</label>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="ჩაწერეთ ტექსტი..."
+                required></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+
+            <button type="submit" class="contact-btn">გაგზავნა</button>
+            <p id="formStatus" class="status"></p>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <!-- 4) რეგისტრაციის ფორმა -->
+    <section class="form-card">
+      <form id="registration-form" novalidate>
+        <h1>სარეგისტრაციო ფორმა</h1>
+        <!-- username -->
+        <p class="username">
+          <label for="userName">User name</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            required
+            minlength="3"
+            maxlength="12" />
+          <span class="error-userName errors"></span>
+        </p>
+        <!-- tel -->
+        <p class="phone">
+          <label for="phone">phone</label>
+          <input type="phone" id="phone" name="phone" />
+          <span class="error-phone errors"></span>
+        </p>
+        <!-- email -->
+        <p class="email">
+          <label for="email">email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error-email errors"></span>
+        </p>
+        <!-- password -->
+        <p class="password">
+          <label for="password">password</label>
+          <input type="password" id="password" name="password" required />
+          <span class="error-password errors"></span>
+        </p>
+        <!-- confirm password -->
+        <p class="confirm-password">
+          <label for="conf-password">repeate password</label>
+          <input
+            type="password"
+            id="conf-password"
+            name="confirmPassword"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" />
+          <span class="error-confirmPassword errors"></span>
+        </p>
+        <!-- terms agreement -->
+        <p class="terms">
+          <input type="checkbox" id="checkbox-terms" name="agree" />
+          <label for="terms">you agree our terms</label>
+          <span class="error-agree errors"></span>
+        </p>
+        <button class="btn" type="submit">registration</button>
+      </form>
+    </section>
+
+    <!-- 5) API – პოსტების ძიება და კომენტარის გაგზავნა -->
+    <section class="form-card">
+      <section>
+        <h2 class="get-posts">მონაცემების გაგზავნა და მიღება სერვერზე</h2>
+
+        <form id="get-posts-form">
+          <h3 class="get-posts">პოსტების ძიება</h3>
+
+          <label for="get-posts" class="get-posts">post ID</label>
+          <input type="number" id="get-posts" name="id" value="1" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <form id="post-comment-form">
+          <h3 class="get-posts">კომენტარები</h3>
+
+          <label for="comments">დაწერე კომენტარი</label>
+          <input type="text" id="comments" name="text" />
+
+          <label for="comment-id">დაწერე ID</label>
+          <input type="number" id="comment-id" name="id" />
+
+          <button type="submit">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="result"></div>
+      </section>
+    </section>
+
+  </div>
+</main>
+
+
 
     <footer id="contact" class="bg-blue-900 text-white text-center p-6 mt-10">
 
         <section>
             <ul class="li_cont">
-                <p><strong>© 2025 PTAGe — საქართველოს ფიზიკის მასწავლებელთა ასოციაცია</strong></p>
-                <p id="fizteria">&copy;<strong>2025 ფიზტერია • ყველა უფლება დაცულია</strong> </p><br>
+                <p class="foot2025"><strong>© 2025 PTAGe — საქართველოს ფიზიკის მასწავლებელთა ასოციაცია</strong></p>
+                
                 <p class="geo-rel"><b>საკონტაქტო ინფორმაცია</b></p><br>
                 <li><a class="contact" href="tel:+995568951422">+995568951422</a></li><br>
                 <li><a class="contact" href="mailto:tinatindavitadze7.com">tinatin davitadze</a></li><br>
@@ -195,7 +323,11 @@
         </button>
 
     </footer>
-<script type="module" src="quotesModule.js"></script>
+
+
+
+
+  <script type="module" src="quotesModule.js"></script>
   <script src="index.js"></script>
   <script src="about.js"></script>
   <script src="education.js"></script>
@@ -208,9 +340,14 @@
   <script src="Dropdown.js"></script>
   <script src="render.js"></script>
   <script src="quotes.js"></script>
-     <script src="photos2.js"></script>
+  <script src="photos2.js"></script>
   <script src="js.js"></script>
-  <script src="founders.js"></script>
+  <article class="founder-card">
+  <script src="dom.js"></script>
+  <script src="api.js"></script>
+  <script src="db.js"></script>
+  <script src="registration-form.js"></script>
+  <script src="loginforms.js"></script>
 
 
 

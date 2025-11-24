@@ -68,8 +68,9 @@
   .text {
     font-size: 28px;
     margin-top: 320px;
+    
   }
-}
+ }
 
 
 @-webkit-keyframes fade {
@@ -177,6 +178,8 @@
     bottom: 15px;
     right: 15px;
   }
+
+  
 }
 @media (min-width: 420px) and (max-width: 1024px) {
   #scrollTopBtn {
@@ -188,6 +191,12 @@
   }
 }
 
+@media (max-width: 420px) {
+ #info{
+  color: white;
+  font-size: 25px;
+ }
+}
 
 
 

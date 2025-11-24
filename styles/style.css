@@ -9,6 +9,9 @@ body {
   line-height: 1.6;
   color: black;
 }
+edu{
+  background-color: white;
+}
 
 /* --- HEADER --- */
 
@@ -132,7 +135,7 @@ body {
     font-size: 18px;
   }
 
-
+/* adres index.html */
 
 
 
@@ -225,7 +228,7 @@ body {
 /* --- HERO BACKGROUND --- */
 
 .bg_image1 {
-  background-image: url("https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/497653466_24405128302421121_9132090218769959741_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHCSNqO5zoqf0tOl_rCozvAU_X-dIEhxENT9f50gSHEQwO9lC1K11qe-NbbCJCRzk_X_2o1Q2uD9JnJKL5vBMCN&_nc_ohc=cb7xcKRoTE4Q7kNvwHrht3O&_nc_oc=AdnTfMpfvbT93TdOUtUFRcII5dtYofIVoO6tbjjLdENJ2HF3otkN0w_a3DWZa8W0ZYs&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=BxHFgU0Q8PTa2uS4mDAmXA&oh=00_AfhlMmD6AsLjzh25rFKDC9D_A5WbX1YwUc0OboHh0jDylg&oe=691EB141");
+  background-image: url("../images/conferense2025/56d23830-8cfe-4790-86e6-83ead04c1363.png");
   min-height: 750px;
   width: 100%;
   margin: 0 auto;
@@ -237,6 +240,7 @@ body {
   padding: 12px;
   border-radius: 20px;
   margin-top: 120px; /* რომ header-ს არ დაეფაროს */
+  z-index: -1;
 }
 
 .small-photo {
@@ -246,11 +250,13 @@ body {
   position: absolute;
   bottom: 50px;
   left: 20px;
-  background-image: url("https://scontent.ftbs4-2.fna.fbcdn.net/v/t39.30808-6/336768551_2310917392409298_3196326985489698166_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFoeMB97b1U0Wzecw2uxHML9X_z94UxdD31f_P3hTF0PbIyUX4Sea55-90wM_RoyXrzay_bGHrOQBQcyBcI2VHT&_nc_ohc=0lex1SaPSh8Q7kNvwHe4feC&_nc_oc=Adn9fiFltv5S4x8MEW5ieBlicMnX9yw0MIzJfKhQt-lV1UKgJ6CLaWXjcE2jznFSuok&_nc_zt=23&_nc_ht=scontent.ftbs4-2.fna&_nc_gid=GfNuwDBOmbOG6dsLOyPMWg&oh=00_AfhjK945lCoGPb9t5dmpokj3T_LHcY_dYakbpCfKt2WbGA&oe=691ECAE5");
+  background-image: url("../images/conferense2025/336768551_2310917392409298_3196326985489698166_n.jpg");
   background-size: cover;
   background-position: center;
   border: 6px solid white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: auto;
+  
 }
 
 .text-ptage {
@@ -262,8 +268,17 @@ body {
   line-height: 1.6;
   padding: 0 15px;
   margin-top: 500px;
+  float:left;
+  margin-left: 400px;
+ 
 }
 
+.physiclink{
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
 /* --- HEADINGS --- */
 
 h1 {
@@ -550,7 +565,8 @@ footer {
   margin-top: 100px;
   width: 100%;
   padding: 15px;
-  background-color: rgb(228, 250, 229); /* იყო არასწორი rgb(228, 508, 299) */
+  border-radius: 10px;
+  background-color:rgba(0, 0, 255, 0.144); /* იყო არასწორი rgb(228, 508, 299) */
 }
 
 .sacont {
@@ -561,7 +577,20 @@ footer {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   margin: 50px auto;
 }
+.geo-rel{
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 24px;
+}
 
+
+.foot2025{
+    color:white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 24px;
+}
 .li_cont {
   list-style: none;
   padding: 0;
@@ -1689,7 +1718,7 @@ filter()–ით ვფილტრავ მასივს, includes()–ი�
 }
 
 a {
-  color: #93c5fd;
+  color: white;
   text-decoration: none;
 }
 
@@ -1956,4 +1985,337 @@ a:hover {
   font-size: 0.8rem;
   color: #0e4f72;
   word-break: break-all;
+}
+
+
+/* json */
+form {
+  background-color: rgb(167, 212, 197);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ღილაკები – უბრალო, როგორც სურათზე */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 29px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* შედეგის ბლოკი – ნათელი, წაკითხული ტექსტით */
+.result {
+  color: #000;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 25px;
+  border: 2px solid rgb(167, 212, 197);
+}
+
+/* როცა ცარიელია – არ ჩანდეს */
+.result:empty {
+  display: none;
+}
+
+.result span {
+  color: #000;
+}
+
+/* კომენტარის ფორმის წინა სტილი, რომ ვერტიკალურად იყოს */
+#post-comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ტიტულები („მონაცემების…“, „პოსტების ძიება“ და ა.შ.) – სურათის სტილში */
+.get-posts {
+  color: #000;
+  font-size: 29px;
+  font-weight: 700;
+}
+
+/* ლუპის აიკონი */
+.fa-magnifying-glass {
+  color: #000;
+  font-size: 24px;
+}
+
+/* input post ID */
+#get-posts {
+  color: #0f2a4a;
+  font-size: 18px;
+}
+
+/* „დაწერე ID“ ლეიბლის სტილი */
+label[for="comment-id"] {
+  font-weight: 700;
+  font-size: 29px;
+  color: #000;
+}
+
+
+
+/* registration-form */
+
+
+
+form {
+    width: 320px;
+    background: white;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px 14px;
+    border: 2px solid #d5d9e2;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #617aff;
+    box-shadow: 0 0 0 3px rgba(97, 122, 255, 0.25);
+}
+
+.terms {
+    display: block;
+}
+
+.terms input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.terms span {
+    display: inline-block;
+}
+
+button {
+    margin-top: 8px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #617aff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+button:hover {
+    background: #4a62d8;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.errors {
+    color: #e63946;
+    font-size: 0.8rem;
+}
+
+
+/* loginforms */
+
+#loginForm {
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: #f3f8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#loginForm input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+#loginForm button {
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #137eb6;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#loginForm button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(19, 126, 182, 0.4);
+}
+
+#loginForm small {
+  font-size: 12px;
+  color: crimson;
+  min-height: 14px;
+}
+
+#loginStatus {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* ვიზუალური feedback-ი */
+.input-error {
+  border-color: crimson !important;
+}
+
+.input-success {
+  border-color: #22c55e !important;
+}
+
+
+/* ganvaTavsod erTad kontactebi */
+
+
+.forms-main {
+  max-width: 1400px;
+  margin: 120px auto 40px;
+  padding: 0 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* GRID –  დიდ ეკრანზე 3 სვეტი -> 3 ზემოთ, 2 ქვემოთ */
+.forms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* საშუალო ეკრანზე – 2 სვეტი */
+@media (min-width: 768px) {
+  .forms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* დიდ ეკრანზე – 3 სვეტი (5 ბლოკი => 3 ზემოთ, 2 ქვემოთ) */
+@media (min-width: 1100px) {
+  .forms-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Card სტილი ყველასთვის */
+.form-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 18px 22px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* პატარა hover ეფექტი – ცოტა „სიცოცხლე“ */
+.form-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+}
+
+/* ფორმის სათაურები */
+.form-card h1,
+.form-card h2,
+.form-card h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* input / textarea ერთიანი სტილი კვალად და რბილად */
+.form-card input,
+.form-card textarea,
+.form-card button {
+  font-family: inherit;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  border: 1px solid #cbd5f5;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ღილაკები – საერთო სტილი */
+.form-card button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  color: #f9fafb;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.form-card button:hover {
+  filter: brightness(1.05);
+}
+
+/* error / status ტექსტი */
+.form-card small,
+.form-card .errors,
+.form-card .status {
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+/* მცირე გასწორებები კონკრეტული სექციებისთვის სურვილისამებრ */
+/* მაგალითად, get-posts-ის ზედა სათაურისთვის */
+.get-posts {
+  margin-bottom: 6px;
 }
