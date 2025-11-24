@@ -642,36 +642,116 @@ footer {
 
 
 
-
 /* რენდერი. */
 
+.users-section {
+  margin: 60px auto;
+  max-width: 1700px;
+  padding: 80px; /* 100px → 60px, ცოტათი შევამცირე, რომ სივრცე მოემატოს ბარათებს */
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.users-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #000;
+}
 
 .search-wrapper {
   margin: 20px 0;
   display: flex;
-  gap: 10px;
+  gap: 40px; /* 80px → 40px, ზედმეტად დიდი შუალედი აღარ იქნება */
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-wrapper label {
+  font-weight: 700;
 }
 
 .search-wrapper input {
-  padding: 8px 12px;
-  font-size: 16px;
-}
-
-#cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.user-card {
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px 15px;
-  min-width: 180px;
+  outline: none;
+  min-width: 260px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.search-wrapper input:focus {
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ბარათების განლაგება */
+.cards-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* 180px → 230px – სვეტები გაიზარდა */
+  gap: 28px; /* 16px → 28px – შუალედები გავზარდე */
+}
+
+/* ბარათები */
+.user-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  animation: fadeInCard 0.35s ease forwards;
+  opacity: 0;
+
+  /* --- დამატებული სიმაღლე --- */
+  min-height: 220px;          /* გინდა შეცვალე 200px / 250px / 300px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
+.user-card h3 {
+  font-size: 20px;     /* 18px → 20px */
+  margin-bottom: 10px;
+  color: #0f172a;
+  word-break: break-word;   /* გრძელი ქართული სახელები აღარ გადაიწერება / გადაისმის */
+}
+
+.user-card p {
+  font-size: 18px;
+  color: #111827;  /* white → მუქი – თეთრ ფონზე აღარ დაიკარგება ტექსტი */
+}
+
+/* hover ეფექტი */
+.user-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+}
+
+/* ანიმაცია ბარათების შემოსვლისთვის */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* „არ მოიძებნა“ ტექსტი */
+.no-results {
+  grid-column: 1 / -1;
+  padding: 22px;
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.9);
+  color: #374151;
+}
 
 
 
