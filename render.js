@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       loginStatus.textContent = "შესვლა წარმატებით შესრულდა ✔️";
       loginStatus.style.color = "green";
 
-      // სურვილით
+   
       // loginForm.reset();
     });
   }
