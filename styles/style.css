@@ -1054,9 +1054,98 @@ footer {
 /* accordeon */
 
 
+.accordion {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-   /* accordion */
- .accordion {
+.wraper-body {
+  background-color: #524587;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 20px 24px;
+}
+
+.accordion-container {
+  max-width: 870px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fontColor {
+  color: rgb(244, 244, 244);
+}
+.fontSize {
+  font-size: 20px;
+}
+
+.accordion h2 {
+  font-size: 27px;
+  padding-top: 20px;
+  margin-bottom: 8px;
+}
+
+.accordion-title {
+  position: relative;
+  padding: 18px 0;
+  cursor: pointer;
+}
+
+.accordion-title::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+}
+
+.accordion-container.active .accordion-title::before {
+  content: "-";
+}
+
+.accordion-description {
+  width: 100%;
+  font-size: 16px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.line {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 8px;
+}
+
+.last {
+  padding-bottom: 20px;
+}
+
+/* NAEC ხატულა */
+.naec {
+  width: 50px;
+  height: 50px;
+  color: black;
+  font-size: 22px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/12/NAEC_Georgia_Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+ /* .accordion {
   height: 750px;
   max-width:1400px;
   width: 100%;
@@ -1135,7 +1224,7 @@ footer {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-}
+} */
 
 
 /* news.html */
