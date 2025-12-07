@@ -68,7 +68,7 @@ edu{
 
 /* კონტეინერი – default: დიდ ეკრანზე არ ჩანს, მობილურზე ჩავრთავთ */
 #burger-wrapper {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -88,7 +88,7 @@ edu{
 .burger .line {
   width: 100%;
   height: 3px;
-color: red; /* თუ ჰედერი მუქია, შეცვალე თეთრზე (#fff) */
+  background-color: #fff;  /* თუ ჰედერი მუქია, შეცვალე თეთრზე (#fff) */
   border-radius: 3px;
   transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.2s ease;
 }
