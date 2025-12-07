@@ -7,3 +7,6 @@ function toggleParagraph(btn) {
     ? "ნაკლები"
     : "ვრცლად";
 }
+
+
+

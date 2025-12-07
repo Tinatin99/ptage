@@ -3,7 +3,7 @@
 /* --- ბურგერის responsive --- */
 
 /* მობილურზე: მენიუ დამალულია, ბურგერი ჩანს */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   #header-PTAGe {
     position: relative;
   }
@@ -19,35 +19,55 @@
     padding: 10px 0;
     gap: 10px;
   }
+}
+/* =========================
+   RESPONSIVE ლოგიკა
+   ========================= */
 
-  /* როცა ბურგერს დააჭერ, JS ამატებს header-open-ს და მენიუ ჩნდება */
-  #header-PTAGe.header-open ul {
-    display: flex;
+/* პატარა/საშუალო ეკრანზე – მენიუ დამალულია, ბურგერი ჩანს */
+@media (max-width: 1023px) {
+  #header-PTAGe ul {
+    display: none;
   }
 
-  .burger-wrapper {
+  /* როცა header-open დაემატება – მენიუ ჩნდება */
+  #header-PTAGe.header-open ul {
     display: flex;
-    margin-left: auto;
-    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  #header-PTAGe.header-open ul a {
+    font-size: 18px;
+  }
+
+  /* აქ ვაჩენთ ბურგერს */
+  #burger-wrapper {
+    display: flex;
   }
 }
 
-/* დიდ ეკრანზე: მენიუ ყოველთვის ჩანს, ბურგერი არ ჩანს */
-@media (min-width: 901px) {
+/* დიდ ეკრანზე – მენიუ ჩანს, ბურგერი აღარ გვჭირდება */
+@media (min-width: 1024px) {
   #header-PTAGe ul {
     display: flex;
   }
 
-  .burger-wrapper {
+  #burger-wrapper {
     display: none;
   }
 }
-
-
-
 /* --- RESPONSIVE --- */
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .ptage-section {
     flex-direction: column;
   }
@@ -61,7 +81,8 @@
   }
 
   .bg_image1 {
-    margin-top: 100px;
+    width: 100%;
+     margin-top: 100px;
     min-height: 500px;
   }
 

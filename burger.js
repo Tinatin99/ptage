@@ -1,32 +1,11 @@
-// const burger = document.querySelector('.burger');
-// const burgerWrapper = document.querySelector('.burger-wrapper');
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerWrapper = document.querySelector('#burger-wrapper');
+  const header = document.querySelector('#header-PTAGe');
 
-// burger.addEventListener('click', () => {
-//   burgerWrapper.classList.toggle('open');
-// });
+  if (!burgerWrapper || !header) return;
 
-
-const burgerWrapper = document.querySelector('#burger-wrapper');
-const header = document.querySelector('#header-PTAGe');
-
-if (burgerWrapper && header) {
   burgerWrapper.addEventListener('click', () => {
-    
-    burgerWrapper.classList.toggle('open');
-
-   
-    header.classList.toggle('header-open');
+    burgerWrapper.classList.toggle('open');        // ბურგერის ანიმაცია
+    header.classList.toggle('header-open');        // მენიუს ჩვენება
   });
-}
-
-// const burgerWrapper = document.querySelector('#burger-wrapper');
-// const header = document.querySelector('#header-PTAGe');
-
-// if (burgerWrapper && header) {
-//   burgerWrapper.addEventListener('click', () => {
-//     burgerWrapper.classList.toggle('open');
-//     header.classList.toggle('header-open'); // ამაზეა მიბმული CSS-ში ul-ის გამოჩენა
-//   });
-// }
-
-
+});
