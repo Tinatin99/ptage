@@ -64,56 +64,76 @@ edu{
 
 
 
+
+/* --- HEADER საბაზისო --- */
+#header-PTAGe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+/* ნავიგაცია default-ზე (desktop) */
+#header-PTAGe .navigation ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+
+
+
+
+
 /* --- BURGER --- */
 
-/* კონტეინერი – default: დიდ ეკრანზე არ ჩანს, მობილურზე ჩავრთავთ */
+/* default-ზე (desktop) – ბურგერი არ ჩანს */
 #burger-wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   margin-left: 10px;
+  color: black;
 }
 
 /* 3 ხაზიანი ბურგერი */
-.burger {
+#burger-wrapper .burger {
   width: 30px;
   height: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #000;
 }
 
 /* ხაზები */
-.burger .line {
+#burger-wrapper .line {
   width: 100%;
   height: 3px;
-  background-color: #fff;  /* თუ ჰედერი მუქია, შეცვალე თეთრზე (#fff) */
+  background-color: black;   /* შავი, რომ არ დაიკარგოს */
   border-radius: 3px;
   transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.2s ease;
 }
 
-/* hover – ოდნავ მუქი */
-.burger-wrapper:hover .line {
+/* hover */
+#burger-wrapper:hover .line {
   background-color: #333;
 }
 
-/* ბურგერის ანიმაცია, როცა აქვს .open */
-.burger-wrapper.open .line:nth-child(1) {
+/* ბურგერის ანიმაცია (X) */
+#burger-wrapper.open .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.burger-wrapper.open .line:nth-child(2) {
+#burger-wrapper.open .line:nth-child(2) {
   opacity: 0;
 }
 
-.burger-wrapper.open .line:nth-child(3) {
+#burger-wrapper.open .line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-
-
-
-
 
 
 /* --- INTRO / INFO --- */

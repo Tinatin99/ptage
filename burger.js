@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!burgerWrapper || !header) return;
 
   burgerWrapper.addEventListener('click', () => {
-    burgerWrapper.classList.toggle('open');        // ბურგერის ანიმაცია
-    header.classList.toggle('header-open');        // მენიუს ჩვენება
+    burgerWrapper.classList.toggle('open');   // ანიმაცია ხაზებზე
+    header.classList.toggle('header-open');   // მენიუს გახსნა/დახურვა
   });
 });

@@ -1,63 +1,38 @@
 /* კონტაქტების რესფონსიულობა */
 
-/* --- ბურგერის responsive --- */
+/* --- RESPONSIVE --- */
 
-/* მობილურზე: მენიუ დამალულია, ბურგერი ჩანს */
+/* მობილურ/პლანშეტ ზომებზე: მენიუ დამალულია, ბურგერი ჩანს */
 @media (max-width: 1024px) {
-  #header-PTAGe {
-    position: relative;
-  }
-
-  #header-PTAGe ul {
-    display: none;                /* default – არ ჩანს */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background-color: rgba(19, 130, 182, 0.95);
-    padding: 10px 0;
-    gap: 10px;
-  }
-}
-/* =========================
-   RESPONSIVE ლოგიკა
-   ========================= */
-
-/* პატარა/საშუალო ეკრანზე – მენიუ დამალულია, ბურგერი ჩანს */
-@media (max-width: 1023px) {
-  #header-PTAGe ul {
-    display: none;
-  }
-
-  /* როცა header-open დაემატება – მენიუ ჩნდება */
-  #header-PTAGe.header-open ul {
-    display: flex;
+  #header-PTAGe .navigation ul {
+    display: none;                 /* default – არ ჩანს */
     flex-direction: column;
     position: absolute;
     top: 100%;
     right: 10px;
-    background: rgba(255, 255, 255, 0.97);
+    background-color: rgba(255, 255, 255, 0.97);
     padding: 10px 15px;
+    gap: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    gap: 10px;
     z-index: 1000;
   }
 
-  #header-PTAGe.header-open ul a {
-    font-size: 18px;
+  /* როცა header-ს აქვს .header-open – ვაჩენთ მენიუს */
+  #header-PTAGe.header-open .navigation ul {
+    display: flex;
   }
 
-  /* აქ ვაჩენთ ბურგერს */
+  /* ახლა ბურგერი უნდა გამოჩნდეს */
   #burger-wrapper {
     display: flex;
+    margin-left: auto;
   }
 }
 
-/* დიდ ეკრანზე – მენიუ ჩანს, ბურგერი აღარ გვჭირდება */
-@media (min-width: 1024px) {
-  #header-PTAGe ul {
+/* desktop-ზე – მენიუ ყოველთვის ჩანს, ბურგერი იმალება */
+@media (min-width: 1025px) {
+  #header-PTAGe .navigation ul {
     display: flex;
   }
 
@@ -65,6 +40,8 @@
     display: none;
   }
 }
+
+
 /* --- RESPONSIVE --- */
 
 @media (max-width: 1024px) {
