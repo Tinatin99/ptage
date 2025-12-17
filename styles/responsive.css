@@ -3,9 +3,90 @@
 /* --- RESPONSIVE --- */
 
 /* მობილურ/პლანშეტ ზომებზე: მენიუ დამალულია, ბურგერი ჩანს */
+
+
+
+/* MOBILE/TABLET <=1024: ბურგერი ჩანს, მენიუ default-ზე დამალულია */
 @media (max-width: 1024px) {
+  #burger-wrapper {
+    display: flex;
+    margin-left: auto;
+    z-index: 2001;
+  }
+   #burger-wrapper{ z-index: 9999;
+   }
+
   #header-PTAGe .navigation ul {
-    display: none;                 /* default – არ ჩანს */
+    display: none;              /* default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 10px 15px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 2000;
+  }
+
+  #header-PTAGe.header-open .navigation ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  #burger-wrapper{
+    display: flex !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 14px !important;
+    transform: translateY(-50%) !important;
+    z-index: 99999 !important;
+    padding: 8px !important;
+    background: rgba(255,255,255,0.25) !important; /* რომ თვალითაც გამოჩნდეს */
+    border-radius: 10px !important;
+  }
+
+  #burger-wrapper .burger{
+    width: 34px !important;
+    height: 26px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  #burger-wrapper .line{
+    display: block !important;
+    width: 100% !important;
+    height: 4px !important;
+    background: #000 !important;
+    border-radius: 999px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+
+/* DESKTOP >=1025: მენიუ ყოველთვის ჩანს, ბურგერი იმალება */
+@media (min-width: 1025px) {
+  #header-PTAGe .navigation ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  #burger-wrapper {
+    display: none;
+  }
+}
+
+/* @media (max-width: 1024px) {
+  #header-PTAGe .navigation ul {
+    display: none;                 
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -17,21 +98,22 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     z-index: 1000;
   }
+} */
 
   /* როცა header-ს აქვს .header-open – ვაჩენთ მენიუს */
-  #header-PTAGe.header-open .navigation ul {
+  /* #header-PTAGe.header-open .navigation ul {
     display: flex;
-  }
+  } */
 
   /* ახლა ბურგერი უნდა გამოჩნდეს */
-  #burger-wrapper {
+  /* #burger-wrapper {
     display: flex;
     margin-left: auto;
   }
-}
+} */
 
 /* desktop-ზე – მენიუ ყოველთვის ჩანს, ბურგერი იმალება */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   #header-PTAGe .navigation ul {
     display: flex;
   }
@@ -39,7 +121,7 @@
   #burger-wrapper {
     display: none;
   }
-}
+} */
 
 
 /* --- RESPONSIVE --- */
