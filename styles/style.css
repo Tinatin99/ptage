@@ -113,7 +113,11 @@ edu{
 #burger-wrapper .burger{ width:34px; 
   height:26px;
    display:flex;
-   flex-direction:column;
+    flex-direction:column;
+   color: #000;
+   font-weight: 900;
+   align-content: center;
+
     justify-content:space-between; }
 
 /* ხაზები */
