@@ -3,6 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* ===== SCROLL FIX (კიდევ ერთხელ: ჩასვი CSS-ის ბოლოში) ===== */
+html, body {
+  width: 100%;
+  overflow-x: hidden;   /* ჰორიზონტალური სკროლი გაქრება */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 body {
   font-family: Arial, sans-serif;
